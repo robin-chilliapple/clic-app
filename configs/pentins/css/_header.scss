@@ -1,0 +1,25 @@
+header {
+  @media (min-height: 481px) {
+    padding-top: 20px;
+  }
+}
+
+.settings-icon {
+  position:absolute;
+  right:14%;
+  top: 10%;
+  height: 100px;
+  width: 3px;
+  font-size: 2.25em;
+}
+
+a {
+  &.logo {
+    img {
+      display: block;
+      text-align: center;
+      margin: 40px auto;
+      width: 150px;
+    }
+  }
+}

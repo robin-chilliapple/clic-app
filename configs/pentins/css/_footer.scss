@@ -1,0 +1,33 @@
+.menu-bar {
+  /*background: url('/img/background.png');*/
+  width: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+  border: black solid 1px;
+
+  .menu-item{
+    color: $dark-grey;
+    width: 20%;
+    img {
+      width: 25px;
+    }
+
+    &.active{
+      background:$primary;
+    }
+  }
+}
+.bottom {
+  background-size: 100%;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+
+  a {
+    color: $dark-grey;
+  }
+}
+

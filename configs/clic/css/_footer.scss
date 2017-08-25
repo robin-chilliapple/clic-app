@@ -1,0 +1,75 @@
+#index {
+  .menu-bar {
+    background: none !important;
+  }
+}
+
+
+.menu-bar {
+  background: url(../img/background-pattern.png);
+  width: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+
+  .upload-bg {
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: 11px 2px;
+    background-color: rgba(255,255,255,0.35);
+    border-radius: 15px;
+  }
+
+  .menu-item{
+    color: $dark-grey;
+    //width: 20%;
+    img {
+      width: 30px;
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+
+    &.active{
+      //background:$yellow;
+    }
+
+    .upload-img {
+      margin-top: 4px;
+      transform: translateY(-2px);
+    }
+  }
+  .offset-xs-1 {
+    margin-left: 12.3333%;
+  }
+  .home-img {
+    width: 28px !important;
+    margin-left: -9px;
+  }
+  .upload-img {
+    width: 45px !important;
+    padding-top: 7px !important;
+  }
+  .reports-img {
+    width: 28px !important;
+    padding-top: 19px !important;
+    margin-left: 13px;
+  }
+  .icon {
+    padding-top: 2px;
+  }
+}
+.bottom {
+  background-size: 100%;
+  position: fixed;
+  bottom: -12px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 7px;
+  @media (min-width: 375px) {
+    bottom: 0;
+  }
+  a {
+    color: $dark-grey;
+  }
+}
+

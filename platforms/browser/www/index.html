@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CLIC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+
+<div id="login" class="screen">
+    <!--<div class="status-bar">&nbsp;</div>-->
+    <div class="container">
+        <header>
+            <div class="logo-container row" data-index="0">
+                <a class="logo" data-call="showIndex">
+                    <img src="img/clic-logo-white.png">
+                </a>
+            </div>
+        </header>
+        <div id="loginLaptop" class="row">
+            <a class="laptopImage">
+                <img class="page-image" src="">
+            </a>
+        </div>
+
+        <form class="form-group" id="login-form">
+            <h2>Login</h2>
+            <div class="login-email">
+                <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="login-password">
+                <input type="password" class="form-control" id="login-password" aria-describedby="emailHelp" placeholder="Enter password">
+            </div>
+            <span onclick="window.open('http://clic.newsoftdemo.info/password/reset', '_system');" class="meta text-span" >Forgotten your password?</span><br>
+            <a class="btn btn-primary" data-call="processLogin">Login</a>
+        </form>
+    </div>
+</div>
+
+<div id="index" class="screen">
+    <!--<div class="status-bar">&nbsp;</div>-->
+    <div id="index-bg"></div>
+    <div class="container">
+        <header>
+            <div class="settings-icon" data-index="5">
+                <i class="fa fa-cog" data-call="showSettings" aria-hidden="true"></i>
+            </div>
+            <div class="logo-container row" data-index="0">
+                <a class="logo" data-call="showIndex">
+                    <img src="img/clic-logo-white.png">
+                </a>
+            </div>
+        </header>
+        <div class="main">
+            <div id="laptopContainer" class="row">
+                <a class="laptopImage">
+                    <img class="page-image" src="">
+                    <!--<img src="img/laptop.png">-->
+                </a>
+            </div>
+            <div class="content-container row">
+                <div class="col-xs-6 upload-button home-button" data-call="accessCamera" data-index="1">
+                    <a class="icon-button upload" ><img src="img/upload-camera.svg" class="icon-medium">
+                        <div class="button-label">Upload Expense</div>
+                        <div>Or Document</div>
+                    </a>
+                </div>
+
+                <div class="col-xs-6 home-button" data-call="showFiles" data-index="3">
+                    <a class="icon-button reports"><img src="img/my-files.svg" class="icon-medium">
+                        <div class="button-label folder-label">My Files And</div>
+                        <div>Folders</div>
+                    </a>
+                </div>
+
+                <div class="col-xs-6 home-button bottom-row-btn" data-call="showExpenses" data-index="2">
+                    <a class="icon-button view"><img src="img/view-uploads.svg" class="icon-medium" style="padding-bottom:10px;">
+                        <div class="button-label">View My</div>
+                        <div>Uploads</div>
+                    </a>
+                </div>
+
+                <div class="col-xs-6 home-button bottom-row-btn" data-call="showContact" data-index="4">
+                    <a class="icon-button contact"><img src="img/get-in-touch.svg" id="contactImg" class="icon-medium">
+                        <div class="button-label contact-label">Get In</div>
+                        <div>Touch</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom menu-bar">
+        <div class="offset-xs-1 col-xs-3 menu-item icon" data-call="showIndex" data-index="0">
+            <a class="mobile"><img class="home-img" src="img/home-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon upload-bg" data-call="accessCamera" data-index="1">
+            <a class="mobile"><img class="upload-img" src="img/camera-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon" data-call="showFiles" data-index="3">
+            <a class="mobile"><img class="reports-img" src="img/folder-bottom.svg"></a>
+        </div>
+    </div>
+</div>
+
+<div id="expenses" class="screen">
+    <!--<div class="status-bar">&nbsp;</div>-->
+    <div class="container expense-container">
+        <header>
+            <div class="settings-icon" data-index="5">
+                <i class="fa fa-cog" data-call="showSettings" aria-hidden="true"></i>
+            </div>
+            <div class="logo-container row" data-index="0">
+                <a class="logo" data-call="showIndex">
+                    <img src="img/clic-logo-white.png">
+                </a>
+            </div>
+        </header>
+        <div class="main">
+            <h1>My Expenses</h1>
+
+            <table id="expenses-table" class="table">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="bottom menu-bar">
+        <div class="offset-xs-1 col-xs-3 menu-item icon" data-call="showIndex" data-index="0">
+            <a class="mobile"><img class="home-img" src="img/home-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon upload-bg" data-call="accessCamera" data-index="1">
+            <a class="mobile"><img class="upload-img" src="img/camera-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon" data-call="showFiles" data-index="3">
+            <a class="mobile"><img class="reports-img" src="img/folder-bottom.svg"></a>
+        </div>
+    </div>
+</div>
+
+<div id="uploading" class="screen">
+    <!--<div class="status-bar">&nbsp;</div>-->
+    <div class="container">
+        <header>
+            <div class="settings-icon" data-index="5">
+                <i class="fa fa-cog" data-call="showSettings" aria-hidden="true"></i>
+            </div>
+            <div class="logo-container row" data-index="0">
+                <a class="logo" data-call="showIndex">
+                    <img src="img/clic-logo-white.png">
+                </a>
+            </div>
+        </header>
+        <div class="main">
+            <div class="row laptop-image-container">
+                <a class="laptopImage">
+                    <img src="img/laptop.png">
+                </a>
+            </div>
+
+            <div class="upload-message">
+                <i class="fa fa-spinner fa-spin"></i>
+                <h2>Uploading your expenses...</h2>
+                <p>Sit back and relax for a minute.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom menu-bar">
+        <div class="offset-xs-1 col-xs-3 menu-item icon" data-call="showIndex" data-index="0">
+            <a class="mobile"><img class="home-img" src="img/home-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon upload-bg" data-call="accessCamera" data-index="1">
+            <a class="mobile"><img class="upload-img" src="img/camera-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon" data-call="showFiles" data-index="3">
+            <a class="mobile"><img class="reports-img" src="img/folder-bottom.svg"></a>
+        </div>
+    </div>
+</div>
+
+<div id="upload-type" class="screen">
+    <!--<div class="status-bar">&nbsp;</div>-->
+    <div class="container">
+        <header>
+            <div class="settings-icon" data-index="5">
+                <i class="fa fa-cog" data-call="showSettings" aria-hidden="true"></i>
+            </div>
+            <div class="logo-container row" data-index="0">
+                <a class="logo" data-call="showIndex">
+                    <img src="img/clic-logo-white.png">
+                </a>
+            </div>
+        </header>
+        <div class="main text-xs-center">
+            <div class="row laptop-image-container">
+                <a class="laptopImage">
+                    <img src="img/laptop.png">
+                </a>
+            </div>
+            <h3 class="m-b-10">What kind of file is this?</h3>
+            <select id="file-type" class="full-width">
+                <option value="expense">Expense</option>
+                <option value="document">Document</option>
+            </select>
+            <div id="payment-method">
+                <h3 class="m-b-10">Payment Method:</h3>
+                <select id="payment-select" name="payment" class="full-width">
+                    <option value="Company_Debit">Company Debit</option>
+                    <option value="Company_Credit">Company Credit</option>
+                    <option value="Personal_Debit">Personal Debit</option>
+                    <option value="Personal_Credit">Personal Credit</option>
+                    <option value="Cash">Cash</option>
+                    <option value="Cheque">Cheque</option>
+                    <option value="Paypal">PayPal</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div id="payment-other" class="hidden" style="margin-top:10px;">
+                    <input id="other-input" class="other-input" name="otherInput" placeholder="Please Specify" type="text" size="50"/>
+                </div>
+            </div>
+            <div class="row">
+                <br>
+                <div class="col-xs-12">
+                    <a id="submit-payment" class="half-width btn btn-primary">NEXT <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom menu-bar">
+        <div class="offset-xs-1 col-xs-3 menu-item icon" data-call="showIndex" data-index="0">
+            <a class="mobile"><img class="home-img" src="img/home-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon upload-bg" data-call="accessCamera" data-index="1">
+            <a class="mobile"><img class="upload-img" src="img/camera-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon" data-call="showFiles" data-index="3">
+            <a class="mobile"><img class="reports-img" src="img/folder-bottom.svg"></a>
+        </div>
+    </div>
+</div>
+<div id="upload-submission" class="screen">
+    <!--<div class="status-bar">&nbsp;</div>-->
+    <div class="container">
+        <header>
+            <div class="settings-icon" data-index="5">
+                <i class="fa fa-cog" data-call="showSettings" aria-hidden="true"></i>
+            </div>
+            <div class="logo-container row" data-index="0">
+                <a class="logo" data-call="showIndex">
+                    <img src="img/clic-logo-white.png">
+                </a>
+            </div>
+        </header>
+        <div class="main">
+            <div class="row laptop-image-container">
+                <a class="laptopImage">
+                    <img src="img/laptop.png">
+                </a>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 id="upload-status"> </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-xs-1 col-xs-10 text-xs-center files-text">ADD ANOTHER PAGE FROM THIS EXPENSE/DOCUMENT</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-xs-center" data-call="accessCamera">
+                    <a class="btn-files btn btn-primary"><i class="fa fa-plus" aria-hidden="true" style="font-size:18px;"></i> ADD ANOTHER</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-xs-2 col-xs-8 text-xs-center files-text">OR</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-xs-center">
+                    <a id="upload-files" class="btn-files btn btn-primary"><i class="fa fa-cloud-upload" aria-hidden="true" style="font-size:18px;"></i> UPLOAD + FINISH</a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-12 text-xs-center btn-clear-files">
+                    <a id="clear-files" class="btn btn-primary">CLEAR FILES + START OVER</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom menu-bar">
+        <div class="offset-xs-1 col-xs-3 menu-item icon" data-call="showIndex" data-index="0">
+            <a class="mobile"><img class="home-img" src="img/home-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon upload-bg" data-call="accessCamera" data-index="1">
+            <a class="mobile"><img class="upload-img" src="img/camera-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon" data-call="showFiles" data-index="3">
+            <a class="mobile"><img class="reports-img" src="img/folder-bottom.svg"></a>
+        </div>
+    </div>
+</div>
+
+<div id="files" class="screen">
+    <!--<div class="status-bar">&nbsp;</div>-->
+    <div class="container">
+        <header>
+            <div class="settings-icon" data-index="5">
+                <i class="fa fa-cog" data-call="showSettings" aria-hidden="true"></i>
+            </div>
+            <div class="logo-container row" data-index="0">
+                <a class="logo" data-call="showIndex">
+                    <img src="img/clic-logo-white.png">
+                </a>
+            </div>
+        </header>
+        <div id="folder-details" class="row">
+            <div class="col-xs-12">
+                <h4 id="folders-heading">
+                    <a id="back" class="btn btn-primary hidden"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</a>
+                    <span id="folder-name">All Folders</span>
+                </h4>
+            </div>
+
+        </div>
+        <div id="file-container" class="row">
+
+        </div>
+    </div>
+
+    <div class="bottom menu-bar">
+        <div class="offset-xs-1 col-xs-3 menu-item icon" data-call="showIndex" data-index="0">
+            <a class="mobile"><img class="home-img" src="img/home-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon upload-bg" data-call="accessCamera" data-index="1">
+            <a class="mobile"><img class="upload-img" src="img/camera-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon" data-call="showFiles" data-index="3">
+            <a class="mobile"><img class="reports-img" src="img/folder-bottom.svg"></a>
+        </div>
+    </div>
+</div>
+
+<div id="contact" class="screen">
+    <!--<div class="status-bar">&nbsp;</div>-->
+    <div class="container">
+        <header>
+            <div class="settings-icon" data-index="5">
+                <i class="fa fa-cog" data-call="showSettings" aria-hidden="true"></i>
+            </div>
+            <div class="logo-container row" data-index="0">
+                <a class="logo" data-call="showIndex">
+                    <img src="img/clic-logo-white.png">
+                </a>
+            </div>
+        </header>
+        <div class="main">
+            <div class="row">
+                <a class="laptopImage">
+                    <img class="page-image" src="">
+                </a>
+            </div>
+
+            <div class="contact-container">
+                <img id="gravatar" src="">
+                <div class="contact-name">
+                    <h1 id="contact-name"></h1>
+                </div>
+                <div class="contact-details">
+                    <p>Call me on <span id="contact-number"></span></p>
+                    <p>or</p>
+                    <p>Email me at: <span id="contact-email"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom menu-bar">
+        <div class="offset-xs-1 col-xs-3 menu-item icon" data-call="showIndex" data-index="0">
+            <a class="mobile"><img class="home-img" src="img/home-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon upload-bg" data-call="accessCamera" data-index="1">
+            <a class="mobile"><img class="upload-img" src="img/camera-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon" data-call="showFiles" data-index="3">
+            <a class="mobile"><img class="reports-img" src="img/folder-bottom.svg"></a>
+        </div>
+    </div>
+</div>
+
+<div id="settings" class="screen">
+    <!--<div class="status-bar">&nbsp;</div>-->
+    <div class="container">
+        <header>
+            <div class="settings-icon" data-index="5">
+                <i class="fa fa-cog" data-call="showSettings" aria-hidden="true"></i>
+            </div>
+            <div class="logo-container row" data-index="0">
+                <a class="logo" data-call="showIndex">
+                    <img src="img/clic-logo-white.png">
+                </a>
+            </div>
+        </header>
+        <div class="main">
+            <div class="row">
+                <a class="laptopImage">
+                    <img class="page-image" src="">
+                </a>
+            </div>
+        </div>
+        <div class="settings-buttons">
+
+            <a type="Account" class="btn btn-primary" href="http://clic.newsoftdemo.info/">View On Web</a>
+
+            <a type="help" class="btn btn-primary" href="mailto:hello@clicbookkeeping.com">Help</a>
+
+            <a type="logout" class="btn btn-primary" data-call="logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="bottom menu-bar">
+        <div class="offset-xs-1 col-xs-3 menu-item icon" data-call="showIndex" data-index="0">
+            <a class="mobile"><img class="home-img" src="img/home-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon upload-bg" data-call="accessCamera" data-index="1">
+            <a class="mobile"><img class="upload-img" src="img/camera-bottom.svg"></a>
+        </div>
+        <div class="col-xs-3 menu-item icon" data-call="showFiles" data-index="3">
+            <a class="mobile"><img class="reports-img" src="img/folder-bottom.svg"></a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/switchery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+    app.initialize();
+
+    function prepareHomePage() {
+        var offset = 0;
+        var totalHeight = $(window).height();
+        var totalWidth = $(window).width();
+        var contentHeight =  237;
+        if (totalWidth <= 360) {
+            offset = 11;
+            contentHeight = 197;
+        }
+        var headerHeight = 151.48;
+        var bottomHeight = 77;
+        var imageHeight = (totalWidth / 532) * 239;
+        var containerHeight = totalHeight - headerHeight - imageHeight - bottomHeight;
+        var padding = containerHeight - contentHeight;
+        var topPadding = 0.588 * padding + 7.5 + offset + 'px';
+        var bottomPadding = 0.412 * padding + 'px';
+        $('.content-container').css('padding-top', topPadding).css('padding-bottom', bottomPadding);
+    }
+</script>
+</body>
+</html>

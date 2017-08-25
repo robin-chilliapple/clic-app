@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.centu.clicbookkeeping" version="9.9.9" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Camera">
+        <param name="browser-package" value="Camera" />
+    </feature>
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <name>CLIC</name>
+    <description>CLIC Bookkeeping</description>
+    <author email="hello@centu.co.uk" href="http://www.centu.co.uk">Centu Consultancy Limited</author>
+    <config>
+        <app theme="clic" />
+        <api url="http://clic.newsoftdemo.info/" />
+    </config>
+    <content src="index.html" />
+    <config-file mode="replace" parent="NSCameraUsageDescription" platform="ios">
+        <string>Used to upload expenses and documents.</string>
+    </config-file>
+    <config-file mode="replace" parent="NSPhotoLibraryUsageDescription" platform="ios">
+        <string>Used to upload expenses and documents.</string>
+    </config-file>
+    <icon src="www/res/icon/ios/icon.png" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="target-device" value="handset" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-targetSdkVersion" value="23" />
+</widget>

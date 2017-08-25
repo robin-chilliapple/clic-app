@@ -1,0 +1,289 @@
+@media (min-height: 500px) and (max-height: 650px) {
+  #upload-submission {
+    #upload-status {
+      margin-top: 10px;
+      font-size: 16px !important;
+    }
+    .files-text {
+      font-size: 15px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .btn-files {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .btn-clear-files {
+      bottom: 63px;
+    }
+  }
+}
+
+.btn-files {
+  width: 65%;
+  @media (min-width: 375px) {
+    width: 55%;
+  }
+  padding-top:10px;
+  padding-bottom:10px;
+}
+#upload-status {
+  margin-bottom:10px;
+  font-weight: bold;
+}
+.files-text {
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.folder-label {
+  margin-top: -3px;
+}
+.contact-label {
+  margin-top: 3px;
+}
+
+.bottom-row-btn {
+  padding-top: 10px;
+
+  @media (min-width: 375px) {
+    padding-top: 20px;
+  }
+}
+
+.btn-clear-files {
+  position: fixed;
+  bottom: 75px;
+  #clear-files {
+    font-size: 10px !important;
+  }
+}
+
+#index {
+  * {
+    z-index: 2;
+  }
+  #index-bg {
+    position: absolute;
+    height: 100vh !important;
+    width: 100vw !important;
+    z-index: -1;
+    background-image: url(../img/background-pattern.png);
+    background-size: 100%;
+  }
+}
+
+.button-label {
+  line-height: 30px;
+  margin-bottom: -10px;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+#upload-quantity {
+  .upload-quantity-icon {
+    font-size:44px;
+    color: $dark-grey;
+  }
+}
+#expenses-table {
+  margin-bottom: 5rem !important;
+}
+.upload-type {
+  margin-bottom:0 !important;
+}
+
+.view-expense {
+  margin-right: 4px;
+}
+
+.items-status {
+  font-size: 14px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+#back {
+  float: right;
+}
+#folders-heading {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid gold;
+  border-bottom: 1px solid gold;
+  margin-bottom: 10px;
+  line-height: 1.5;
+
+  #folder-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.fa-folder-open, .fa-file-text-o {
+  color: $dark-grey;
+}
+
+h1 {
+  margin-top: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Museo Sans 100';
+}
+
+h3 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-family: 'Museo Sans 100';
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Museo Sans 100';
+}
+
+body, html {
+  overflow-x: hidden !important;
+}
+table {
+  color: black;
+
+  td {
+    padding: 0.25rem !important;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+a{
+  &.icon-button{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f4f4ef+100 */
+    //background: #ffffff;
+    ///* Old browsers */
+    //background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+    ///* FF3.6-15 */
+    //background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+    ///* Chrome10-25,Safari5.1-6 */
+    //background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+    /* IE6-9 */
+    color: #4d4d4f;
+    display: block;
+    width: 165px;
+    max-height: 150px;
+    padding-top: 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    @media (min-width: 375px) {
+      margin-bottom: 15px;
+    }
+
+    i {
+      display: block;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-color: white;
+      background-position: top center;
+      width: 60px;
+      height: 60px;
+      margin: 14px auto 1px auto;
+    }
+    &.upload{
+      margin-left: 15px;
+      img {
+        width: 49px;
+        padding-bottom: 10px;
+      }
+    }
+
+    &.icon-button{
+      &.reports{
+        margin-left: -12px;
+        img {
+          width: 49px;
+          //background-image: url("/img/reports.png");
+        }
+      }
+      &.view{
+        margin-left: 15px;
+        img {
+          width: 31px;
+          padding-bottom: 2px;
+          //background-image: url("/img/expenses.png");
+        }
+      }
+      &.contact{
+        margin-left: -12px;
+        img {
+          width: 53px;
+          padding-bottom: 11px;
+          margin-top: 6px;
+          //background-image: url("/img/contact.png");
+        }
+      }
+    }
+  }
+}
+
+#expenses {
+  h1, h2, h3 {
+    text-transform: uppercase;
+  }
+}
+
+.upload-type-img {
+  margin-bottom: 5px;
+}
+
+.icon-small{
+  width: 35px;
+}
+
+.file {
+  &:last-of-type {
+    margin-bottom: 35px;
+  }
+  i {
+    font-size: 25px!important;
+    padding-left: 5px;
+  }
+}
+
+
+#uploading .upload-message {
+  text-align: center;
+  margin-top: 30px;
+
+  .fa {
+    color: $yellow;
+    font-size: 40px;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    color: #999;
+  }
+}

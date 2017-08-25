@@ -1,0 +1,29 @@
+header {
+  padding-top: 20px;
+  background-image: url(../img/background-pattern.png);
+  background-size: 100%;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.settings-icon {
+  position:absolute;
+  right:9%;
+  top: 51px;
+  height: 100px;
+  //width: 3px;
+  font-size: 2.25em;
+  color: white;
+}
+
+a {
+  &.logo {
+    img {
+      display: block;
+      text-align: center;
+      margin: 40px auto;
+      width: 175px;
+      margin-top: 20px;
+    }
+  }
+}
